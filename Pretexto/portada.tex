@@ -1,0 +1,54 @@
+\begin{titlepage}
+    \thispagestyle{empty}
+    
+    \pagecolor{white}
+    
+    % Ahora dibujamos las bandas laterales con \rule{}
+    \begin{picture}(0,0)
+        % Primera banda (amarilla, la más a la izquierda)
+        \put(-94,-800){\textcolor{yellowdark}{\rule{3cm}{99.7cm}}} 
+        % Segunda banda (verde)
+        \put(-48,-800){\textcolor{yellowlight}{\rule{1.5cm}{99.7cm}}}
+        % Tercera banda (azul)
+        \put(-20,-800){\textcolor{primaryblue}{\rule{1cm}{99.7cm}}}
+    \end{picture}
+    
+    % Contenido principal de la portada
+    \begin{flushleft}
+        \vspace*{1cm}
+
+        % Ajusta este valor para mover todo hacia la derecha
+        \hspace*{4.5cm}
+        \begin{minipage}{13cm} % ancho de bloque de texto
+            % Logo 
+
+            \includegraphics[width=6cm]{img/logo.png}
+
+
+            \vspace{3cm} 
+            
+            % Títulos y texto
+            {\fontsize{24}{28}\selectfont\color{primaryblue}
+            \textbf{COTIZADOR LA LIGA}\par}
+
+            \vspace{2cm}
+
+            {\fontsize{36}{42}\selectfont\color{primaryblue}
+            \textbf{Manual de Usuario}\par}
+            
+            \vspace{1cm}
+            
+            {\fontsize{16}{20}\selectfont\color{charcoal}
+            Versión 1.0\par}
+            
+            \vfill 
+            
+            \rule{10cm}{1pt}
+            
+            \vspace{0.5cm}
+            
+            {\fontsize{16}{20}\selectfont\color{charcoal}
+            Septiembre 2025\par}
+        \end{minipage}
+    \end{flushleft}
+\end{titlepage}
