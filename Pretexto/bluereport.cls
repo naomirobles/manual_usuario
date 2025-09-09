@@ -40,11 +40,23 @@
 \RequirePackage{afterpage}
 \usetikzlibrary{calc,positioning}
 \usepackage{multicol}
+
+\usepackage{array}
+\usepackage{colortbl}
+\usepackage{xcolor}
+\usepackage{tcolorbox}
+\usepackage{tikz}
+\usepackage{enumitem}
+\usepackage{booktabs}
+\usepackage{booktabs}
 %----------------------------------------
 % PALETA DE COLORES
 \definecolor{primaryblue}{HTML}{2b4aad}
-\definecolor{yellowlight}{HTML}{f2edc9}
+\definecolor{yellowlight}{HTML}{f4fad1}
+\definecolor{light}{HTML}{e0e7ff}
+
 \definecolor{yellowdark}{HTML}{c2c886}
+\definecolor{lightblue}{HTML}{a4b9ff}
 \definecolor{charcoal}{RGB}{54,69,79}
 \definecolor{white}{RGB}{255,255,255}
 \definecolor{lightgray}{RGB}{245,245,245}
@@ -171,3 +183,21 @@
     ]
   }{\end{tcolorbox}}
 }{}
+
+% Comando personalizado para celdas con esquinas redondeadas
+\newcommand{\roundedcell}[3][yellowlight]{%
+    \begin{tcolorbox}[
+        colback=#1,
+        colframe=#1,
+        boxrule=0pt,
+        arc=3pt,
+        left=2pt,
+        right=2pt,
+        top=2pt,
+        bottom=2pt,
+        width=\linewidth
+    ]
+    \textbf{\color{primaryblue}#2} #3
+    \end{tcolorbox}
+}
+

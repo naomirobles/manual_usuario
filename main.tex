@@ -7,32 +7,103 @@
 \begin{document}
 
 \include{Pretexto/portada}
+
+
 \tableofcontents
 \pagebreak
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Introducción}
+Esta herramienta es una aplicación de escritorio diseñada para simplificar y agilizar el proceso de creación de cotizaciones, 
+permitiendo a los usuarios generar documentos profesionales de manera rápida y eficiente. Además, facilita la gestión de registros de cotizaciones.\\
 
-Breve descripción del software.
+La aplicación cuenta con una interfaz intuitiva que permite a los usuarios ingresar detalles de productos y servicios, con funcionalidades
+avanzadas como la importación de datos desde archivos Excel, lo que elimina la necesidad de captura manual repetitiva y reduce significativamente 
+los errores de transcripción. \\
+El presente manual tiene como propósito guiar a los usuarios finales a través de todas las funcionalidades del sistema, proporcionando instrucciones 
+detalladas y claras para aprovechar al máximo las capacidades de la aplicación. Está dirigido específicamente a usuarios que requieren crear y gestionar 
+cotizaciones de manera profesional.
 
-Propósito del manual.
-
-A quién va dirigido (usuarios, administradores, etc.).
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Requisitos del Sistema}
 
-\subsection{Hardware y software necesarios.}
+\subsection{Requisitos Mínimos de Hardware}
+\begin{center}
+\begin{tcolorbox}[
+    enhanced,
+    boxrule=2pt,
+    colframe=primaryblue,
+    colback=light,
+    rounded corners=5pt,
+    width=0.98\textwidth
+]
 
+\renewcommand{\arraystretch}{1.6}
+\begin{tabular}{>{\raggedright\bfseries}p{3.5cm} 
+                >{\raggedright\arraybackslash}p{9.5cm}}
+
+\textcolor{primaryblue}{Procesador:} & 
+\begin{minipage}[t]{9cm}
+\vspace{-0.3cm}
+\begin{itemize}[leftmargin=10pt, itemsep=2pt]
+    \item \textcolor{black}{Intel Core i3 de 4ta generación o AMD equivalente}
+    \item \textcolor{black}{Arquitectura x64 (64 bits)}
+    \item \textcolor{black}{\textbf{Velocidad mínima de 2.0 GHz}}
+\end{itemize}
+\vspace{0.7cm}
+\end{minipage} \\[8pt]
+\hline
+\textcolor{primaryblue}{Memoria RAM:} & 
+\begin{minipage}[t]{9cm}
+\vspace{-0.3cm}
+\begin{itemize}[leftmargin=10pt, itemsep=2pt]
+    \item \textcolor{black}{4 GB de RAM como mínimo}
+    \item \textcolor{black}{\textbf{8 GB recomendado para mejor rendimiento}}
+    \item \textcolor{black}{Velocidad mínima de 2.0 GHz}
+\end{itemize}
+\vspace{0.7cm}
+\end{minipage} \\[8pt]
+\hline
+\textcolor{primaryblue}{Almacenamiento:} & 
+\begin{minipage}[t]{9cm}
+\vspace{-0.3cm}
+\begin{itemize}[leftmargin=10pt, itemsep=2pt]
+    \item \textcolor{black}{500 MB de espacio libre en disco duro para la instalación base}
+    \item \textcolor{black}{200 MB adicionales para base de datos y archivos temporales}
+    \item \textcolor{black}{\textbf{Espacio adicional según el volumen de cotizaciones almacenadas}}
+\end{itemize}
+\vspace{0.7cm}
+\end{minipage} \\[8pt]
+\hline
+\textcolor{primaryblue}{Otros componentes:} & 
+\textcolor{black}{\textbf{Conexión a internet recomendada.}} \\[5pt]
+
+\end{tabular}
+\end{tcolorbox}
+\end{center}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection{Requisitos de Software}
+\begin{itemize}
+    \item Lector de archivos PDF (para visualizar las cotizaciones generadas)
+    \item Microsoft Excel o software compatible para crear archivos .xlsx/.xls (opcional, solo si se utilizará la función de importación)
+\end{itemize}
 
 \subsection{Sistemas operativos compatibles.}
+\begin{itemize}
+    \item Windows 10 (versión 1903 o superior)
+    \item Windows 11 (todas las versiones)
+\end{itemize}
 
-Se implementa un bucle iterativo que evalúa diferentes valores de k (de 2 a 10 clusters) utilizando cuatro métricas de validación. Para cada valor de k, se ajusta un modelo K-Means y se calculan todas las métricas de evaluación.
+Arquitectura del sistema: x64 (64 bits), no compatible con sistemas operativos de 32 bits.
 
-\begin{importante}[Configuración del Modelo]
-Para garantizar la reproducibilidad de los resultados, se utiliza un estado aleatorio .
-\end{importante}
--
+\subsubsection{Notas adicionales}
+\begin{itemize}
+    \item La aplicación incluye todas las dependencias necesarias (SQLite, Puppeteer) en el paquete de instalación.
+    \item No requiere instalación de Node.js ni otras herramientas de desarrollo.
+    \item El archivo de base de datos se almacena localmente y no requiere servidor externo.
+\end{itemize}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -56,10 +127,31 @@ Gestión de productos/servicios
 \subsection{Ejemplo de cotización completa}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Resolución a problemas comunes}
-\subsection{No abre correctamente el archivo excel}
-\subsection{Error al generar el PDF}
-\subsection{No se muestran las imágenes}
-\subsection{Problemas al ingresar datos}
+\begin{definicion}[No abre correctamente el archivo excel]
+    Este apartado aborda problemas comunes que los usuarios pueden encontrar al utilizar el software, 
+    proporcionando soluciones prácticas y consejos para resolverlos.
+\end{definicion}
+\vspace{0.7cm}
+\begin{definicion}[No se guardan los cambios realizados]
+    Este apartado aborda problemas comunes que los usuarios pueden encontrar al utilizar el software, 
+    proporcionando soluciones prácticas y consejos para resolverlos.
+\end{definicion}
+\vspace{0.7cm}
+\begin{definicion}[Error al generar el PDF]
+    Este apartado aborda problemas comunes que los usuarios pueden encontrar al utilizar el software, 
+    proporcionando soluciones prácticas y consejos para resolverlos.
+\end{definicion}
+\vspace{0.7cm}
+\begin{definicion}[No se muestran las imágenes]
+    Este apartado aborda problemas comunes que los usuarios pueden encontrar al utilizar el software, 
+    proporcionando soluciones prácticas y consejos para resolverlos.
+\end{definicion}
+\vspace{0.7cm}
+\begin{definicion}[Problemas al ingresar datos]
+    Este apartado aborda problemas comunes que los usuarios pueden encontrar al utilizar el software, 
+    proporcionando soluciones prácticas y consejos para resolverlos.
+\end{definicion}
+
 \subsection{Soporte y contacto}
 \pagebreak
 
