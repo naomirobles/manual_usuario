@@ -24,7 +24,8 @@
 
 \RequirePackage[spanish]{babel}
 \RequirePackage{amsmath,amsfonts,amssymb,mathtools}
-\RequirePackage{graphicx,float,subcaption,wrapfig}
+%\RequirePackage{graphicx,float,subcaption,wrapfig}
+\RequirePackage{graphicx,float,wrapfig}
 \RequirePackage{geometry,fancyhdr,titlesec,tocloft,enumitem}
 \RequirePackage{xcolor,microtype}
 \RequirePackage{booktabs,array,longtable,colortbl}
@@ -33,7 +34,6 @@
 \IfFileExists{minted.sty}{\RequirePackage{minted}[cache=false]}{}
 \RequirePackage[backend=biber,style=ieee]{biblatex}
 \addbibresource{referencias.bib}
-\usepackage{tikz}
 \usepackage{helvet} % Para usar la fuente Helvetica (similar a la del ejemplo)
 \usepackage{lipsum} % Solo para texto de ejemplo
 \RequirePackage{tikz}
@@ -48,7 +48,8 @@
 \usepackage{tikz}
 \usepackage{enumitem}
 \usepackage{booktabs}
-\usepackage{booktabs}
+\usepackage{hyperref}
+\RequirePackage{hyperref}
 %----------------------------------------
 % PALETA DE COLORES
 \definecolor{primaryblue}{HTML}{2b4aad}
