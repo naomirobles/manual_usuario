@@ -11,10 +11,18 @@
 
 \tableofcontents
 \pagebreak
-
+\listoffigures
+\pagebreak
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Introducción}
-
+Esta herramienta es una aplicación de escritorio diseñada para simplificar y agilizar el proceso de creación de cotizaciones, 
+permitiendo a los usuarios generar documentos profesionales de manera rápida y eficiente. \\
+La aplicación cuenta con una interfaz intuitiva que permite a los usuarios ingresar detalles de productos y servicios, con funcionalidades
+avanzadas como la importación de datos desde archivos Excel, lo que elimina la necesidad de captura manual repetitiva y reduce significativamente 
+los errores de transcripción. \\
+El presente manual tiene como propósito guiar a los usuarios finales a través de todas las funcionalidades del sistema, proporcionando instrucciones 
+detalladas y claras para aprovechar al máximo las capacidades de la aplicación. Está dirigido específicamente a usuarios que requieren crear y gestionar 
+cotizaciones de manera profesional.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Requisitos del Sistema}
@@ -104,6 +112,7 @@ Arquitectura del sistema: x64 (64 bits), no compatible con sistemas operativos d
 
 Para abir la aplicacion, simplemente haga doble clic en el archivo ejecutable o utilice el acceso directo creado durante la instalación.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\pagebreak
 \section{Interaz Principal y Funcionalidades}
 \subsection{Explicación del menú de Gestión de Cotizaciones}
 
@@ -111,18 +120,16 @@ En el menu de getión de cotizaciones, se muestran todas las cotizaciones previa
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.8\textwidth]{Imagenes/gestion_cotizaciones.png}
-    \caption{Menú de Gestión de Cotizaciones}
-    \label{fig:gestion_cotizaciones}
+    \includegraphics[width=0.85\textwidth]{img/gestion_cotizaciones.png}
+    \caption{Menú de Gestión de Cotizaciones}\label{fig:gestion_cotizaciones}
 \end{figure}
 
 Ademas, se incluye un botón para agregar nuevas cotizaciones.
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.8\textwidth]{Imagenes/agregar_cotizacion.png}
-    \caption{Botón para Agregar Cotización}
-    \label{fig:agregar_cotizacion}
+    \includegraphics[width=0.2\textwidth]{img/agregar_cotizacion.png}
+    \caption{Botón para Agregar Cotización}\label{fig:agregar_cotizacion}
 \end{figure}
 
 \subsection{Página para agregar cotizaciones}
@@ -132,23 +139,29 @@ Ademas, se incluye un campo para importar datos desde un archivo Excel, para ell
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.8\textwidth]{Imagenes/agregar_cotizacion_pagina.png}
-    \caption{Página para Agregar Cotizaciones}
-    \label{fig:agregar_cotizacion_pagina}
+    \includegraphics[width=0.85\textwidth]{img/agregar_cotizacion_pagina.png}
+    \caption{Página para Agregar Cotizaciones}\label{fig:agregar_cotizacion_pagina}
 \end{figure}
 
-Para cada campo, hay un boton, que permite al usuario ingresar la informacioón desde el archivo Excel seleccionado, abriendo una nueva ventana con la opcion de dar click sobre la informacion deseada.
+\begin{minipage}{0.75\linewidth}
+    Para cada campo, hay un boton que se ve como la figura~\ref{fig:importar_datos}, que permite al usuario ingresar la información
+     desde el archivo Excel seleccionado, abriendo una nueva ventana con la opcion de 
+     dar click sobre la informacion deseada.
+\end{minipage}
+\begin{minipage}{0.15\linewidth}
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.5\textwidth]{img/boton_importacion.png}
+        \caption{}\label{fig:importar_datos}
+    \end{figure}
+\end{minipage}
+
+
+
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.8\textwidth]{Imagenes/boton_importacion.png}
-    \caption{Boton para importar datos desde Excel}
-    \label{fig:importar_datos}
-\end{figure}
-
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=0.8\textwidth]{Imagenes/ventana_importacion.png}
+    \includegraphics[width=0.8\textwidth]{img/ventana_importacion.png}
     \caption{Ventana de importación de datos}
     \label{fig:ventana_importacion}
 \end{figure}
@@ -160,7 +173,7 @@ Para agregar productos, se incluyo una tabla, donde se pueden agregar, editar o 
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.8\textwidth]{Imagenes/tabla_productos.png}
+    \includegraphics[width=0.8\textwidth]{img/tabla_productos.png}
     \caption{Tabla de productos/servicios}
     \label{fig:tabla_productos} 
 \end{figure}
@@ -169,7 +182,7 @@ Una vez concluida la cotizacion y verificada la informacion, se puede guardar la
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.8\textwidth]{Imagenes/boton_guardar.png}
+    \includegraphics[width=0.8\textwidth]{img/boton_guardar.png}
     \caption{Botón para guardar la cotización}
     \label{fig:boton_guardar}
 \end{figure}
@@ -179,31 +192,68 @@ Una vez concluida la cotizacion y verificada la informacion, se puede guardar la
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Ejemplos prácticos}
 \subsection{Cómo registrar una cotización}
-Al abrir por primera vez la aplicación, la página de \textbf{Cotizaciones guardadas} se verá como se muestra en la figura 1.
+Al abrir por primera vez la aplicación, la página de \textbf{Cotizaciones guardadas} se verá como se muestra en la figura~\ref{fig:vista_inicial}
 Como aun no hay registros de cotizaciones, la tabla estará vacía. Para agregar una nueva cotización, haz clic en el botón \textbf{Agregar Cotización} o dentro de
 la tabla en \textbf{Crear primera cotización}. Esto te llevará a la página para agregar una nueva cotización, donde podrás ingresar los detalles necesarios.
-\begin{figure}[H]
-    \centering
-        \includegraphics[width=0.85\linewidth]{img/abrir_primera_vez.png}
-    \caption{Vista inicial de la página de cotizaciones guardadas al abrir la aplicación por primera vez.}
-    \label{fig:vista_inicial}
-\end{figure}
 Una vez en la página de agregar cotización, podrás ver la siguiente interfaz (figura 2). Aquí podrás ingresar los detalles de la cotización.
+    \begin{figure}[H]
+        \centering
+            \includegraphics[width=0.85\linewidth]{img/abrir_primera_vez.png}
+        \caption{Vista inicial de la página de cotizaciones guardadas al abrir la aplicación por primera vez.}
+        \label{fig:vista_inicial}
+    \end{figure}
+
+
 \begin{figure}[H] 
     \centering
         \includegraphics[width=0.85\linewidth]{img/add_cotizacion_inicial.png}
-    \caption{Vista inicial de la página de agregar cotización al abrir la aplicación por primera vez.}
-    \label{fig:vista_inicial_add}
+\caption{Vista inicial de la página de agregar cotización al abrir la aplicación por primera vez.}\label{fig:vista_inicial_add}
 \end{figure}
 En esta parte podrás elegir entre dos opciones para ingresar los datos, la primera es dando clic sobre los campos y escribir a través del teclado.
 \begin{figure}[H] 
     \centering
         \includegraphics[width=0.85\linewidth]{img/llenar_campos.png}
     \caption{Da clic en los campos y escribe para llenarlos manualmente.}
+    \label{fig:llenado_manual1}
+\end{figure}
+La segunda opción es importando los datos desde un archivo de Excel. Para ello, dirígete a la sección de 
+\textbf{Importación desde Excel} que encontrarás hasta arriba de la ventana y haz clic en el botón \textbf{Examinar}. A continuación, se abrirá una ventana 
+del Explorador de archivos donde podrás seleccionar el archivo de Excel que contiene los datos de la cotización que deseas importar. Asegúrate de que el archivo 
+esté en formato .xlsx o .xls.
+\begin{figure}[H] 
+    \centering
+        \includegraphics[width=0.85\linewidth]{img/archivos_cargados.png}
+    \caption{Una vez que seleccionaste el archivo desde tu almacenamiento, verás el nombre del archivo en esta área.}
     \label{fig:llenado_manual}
 \end{figure}
-La segunda opción es importando los datos desde un archivo de Excel. Para ello, dirígete a la sección de \textbf{Importación desde Excel} que encontrarás hasta arriba de la ventana y haz clic en el botón \textbf{Examinar}. 
-A continuación, se abrirá una ventana del Explorador de archivos donde podrás seleccionar el archivo de Excel que contiene los datos de la cotización que deseas importar. Asegúrate de que el archivo esté en formato .xlsx o .xls.
+Lo que deberás hacer a continuación es seleccionar la hoja del archivo de Excel que contiene los datos que deseas importar. 
+Para ello, haz clic en el menú desplegable que se encuentra abajo del texto  \textbf{Hoja de trabajo} y elige la hoja correspondiente.
+\begin{figure}[H] 
+    \centering
+        \includegraphics[width=0.85\linewidth]{img/seleccionar_hoja.png}
+    \caption{Selecciona la hoja del archivo de Excel que contiene los datos que deseas importar.}
+    \label{fig:seleccionar_hoja}
+\end{figure}
+
+Una vez que hayas seleccionado la hoja, podrás comenzar a importar los datos a los campos correspondientes.
+En cada campo, verás un botón con un ícono en color azul.
+
+\begin{figure}[H]
+    \centering
+    \begin{minipage}{0.456\linewidth}
+        \centering
+        \includegraphics[width=\linewidth]{img/llenar_datos_excel.png}
+    \end{minipage}
+    \begin{minipage}{0.49\linewidth}
+        \centering
+        \includegraphics[width=\linewidth]{img/registrar_productos_excel.png}
+    \end{minipage}
+
+    \caption{Icono para importar datos desde Excel}
+    \label{fig:icono-importar}
+\end{figure}
+
+
 
 \subsection{Cómo eliminar una cotización}
 \subsection{Cómo editar una cotización}

@@ -1,4 +1,4 @@
-% bluereport.cls - Clase personalizada con estilo azul elegante
+% bluereport.cls - Clase personalizada con estilo azul elegante (Versión limpia)
 % Autor: Usuario
 % Fecha: 2025/09/02
 
@@ -23,59 +23,22 @@
 \fi\fi
 
 \RequirePackage[spanish]{babel}
-\RequirePackage{amsmath,amsfonts,amssymb,mathtools}
-%\RequirePackage{graphicx,float,subcaption,wrapfig}
-\RequirePackage{graphicx,float,wrapfig}
-\RequirePackage{geometry,fancyhdr,titlesec,tocloft,enumitem}
-\RequirePackage{xcolor,microtype}
-\RequirePackage{booktabs,array,longtable,colortbl}
-\RequirePackage{listings}
-\RequirePackage{pgffor}
-\IfFileExists{minted.sty}{\RequirePackage{minted}[cache=false]}{}
-\RequirePackage[backend=biber,style=ieee]{biblatex}
-\addbibresource{referencias.bib}
-\usepackage{helvet} % Para usar la fuente Helvetica (similar a la del ejemplo)
-\usepackage{lipsum} % Solo para texto de ejemplo
-\RequirePackage{tikz}
-\RequirePackage{afterpage}
-\usetikzlibrary{calc,positioning}
-\usepackage{multicol}
+\RequirePackage{graphicx,float}
+\RequirePackage{geometry,fancyhdr,titlesec}
+\RequirePackage{xcolor}
+\RequirePackage{array}
+\RequirePackage[most]{tcolorbox}
+\RequirePackage{enumitem}
 
-\usepackage{array}
-\usepackage{colortbl}
-\usepackage{xcolor}
-\usepackage{tcolorbox}
-\usepackage{tikz}
-\usepackage{enumitem}
-\usepackage{booktabs}
-\usepackage{hyperref}
-\RequirePackage{hyperref}
 %----------------------------------------
 % PALETA DE COLORES
 \definecolor{primaryblue}{HTML}{2b4aad}
 \definecolor{yellowlight}{HTML}{f4fad1}
 \definecolor{light}{HTML}{e0e7ff}
-
 \definecolor{yellowdark}{HTML}{c2c886}
-\definecolor{lightblue}{HTML}{a4b9ff}
 \definecolor{charcoal}{RGB}{54,69,79}
-\definecolor{white}{RGB}{255,255,255}
 \definecolor{lightgray}{RGB}{245,245,245}
 \definecolor{mediumgray}{RGB}{189,189,189}
-% Definir colores personalizados
-\definecolor{greenlight}{RGB}{205,214,183}
-\definecolor{yellowlight}{RGB}{227,222,192}
-
-\definecolor{charcoal}{RGB}{51,51,51}
-\definecolor{mediumgray}{RGB}{150,150,150}
-
-% Colores adicionales para código
-\definecolor{codegreen}{RGB}{28,120,28}
-\definecolor{codegray}{RGB}{128,128,128}
-\definecolor{codeblue}{RGB}{0,102,204}
-\definecolor{codepurple}{RGB}{153,51,153}
-\definecolor{codebackground}{RGB}{248,248,248}
-\definecolor{codeborder}{RGB}{200,220,200}
 
 %----------------------------------------
 % GEOMETRÍA
@@ -149,56 +112,31 @@
   {\color{primaryblue}\thesubsubsection}
   {0.5em}
   {\color{primaryblue}}
+
+% Personalizar tabla de contenidos
+\renewcommand{\tableofcontents}{%
+  \section*{Índice}
+  \@starttoc{toc}%
+}
+
+\renewcommand{\listoffigures}{%
+  \section*{Lista de Figuras}
+  \@starttoc{lof}%
+}
 \makeatother
 
 %----------------------------------------
 % ENTORNOS PERSONALIZADOS
-\IfFileExists{tcolorbox.sty}{
-  \RequirePackage{tcolorbox}
-  \tcbuselibrary{skins,breakable}
-  
-  \newenvironment{definicion}[1][Definición]{%
-    \begin{tcolorbox}[
-      colback=white,colframe=primaryblue,
-      coltitle=white,colbacktitle=primaryblue,
-      title=#1,fonttitle=\bfseries,
-      boxrule=1pt,arc=3pt
-    ]
-  }{\end{tcolorbox}}
+\newenvironment{definicion}[1][Definición]{%
+  \begin{tcolorbox}[
+    colback=white,colframe=primaryblue,
+    coltitle=white,colbacktitle=primaryblue,
+    title=#1,fonttitle=\bfseries,
+    boxrule=1pt,arc=3pt
+  ]
+}{\end{tcolorbox}}
 
-  \newenvironment{ejemplo}[1][Ejemplo]{%
-    \begin{tcolorbox}[
-      colback=lightgray,colframe=primaryblue,
-      coltitle=white,colbacktitle=primaryblue,
-      title=#1,fonttitle=\bfseries,
-      boxrule=1pt,arc=3pt
-    ]
-  }{\end{tcolorbox}}
-
-  \newenvironment{importante}[1][Importante]{%
-    \begin{tcolorbox}[
-      colback=yellowlight,colframe=yellowdark,
-      coltitle=white,colbacktitle=yellowdark,
-      title=#1,fonttitle=\bfseries,
-      boxrule=2pt,arc=3pt
-    ]
-  }{\end{tcolorbox}}
-}{}
-
-% Comando personalizado para celdas con esquinas redondeadas
-\newcommand{\roundedcell}[3][yellowlight]{%
-    \begin{tcolorbox}[
-        colback=#1,
-        colframe=#1,
-        boxrule=0pt,
-        arc=3pt,
-        left=2pt,
-        right=2pt,
-        top=2pt,
-        bottom=2pt,
-        width=\linewidth
-    ]
-    \textbf{\color{primaryblue}#2} #3
-    \end{tcolorbox}
-}
-
+%----------------------------------------
+% HIPERVINCULOS
+\RequirePackage[colorlinks=true, linkcolor=primaryblue,
+                citecolor=primaryblue, urlcolor=primaryblue]{hyperref}

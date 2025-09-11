@@ -31,4 +31,4 @@
 !*.jpeg
 
 # Archivos PDF generados
-!*.pdf
+*.pdf
