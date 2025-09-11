@@ -43,11 +43,74 @@ Para abir la aplicacion, simplemente haga doble clic en el archivo ejecutable o 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Interaz Principal y Funcionalidades}
 \subsection{Explicación del menú de Gestión de Cotizaciones}
+
+En el menu de getión de cotizaciones, se muestran todas las cotizaciones previamente realizadas, con opciones para editar, eliminar o generar el PDF de cada una.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{Imagenes/gestion_cotizaciones.png}
+    \caption{Menú de Gestión de Cotizaciones}
+    \label{fig:gestion_cotizaciones}
+\end{figure}
+
+Ademas, se incluye un botón para agregar nuevas cotizaciones.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{Imagenes/agregar_cotizacion.png}
+    \caption{Botón para Agregar Cotización}
+    \label{fig:agregar_cotizacion}
+\end{figure}
+
 \subsection{Página para agregar cotizaciones}
-\subsubsection{Importar desde Excel}
-Importar desde Excel
+
+En la pagina para agregar cotizaciones, se encuentran varios campos para ingresar los datos necesarios, como el nombre del cliente, la fecha, los productos o servicios a cotizar, y cualquier otro detalle relevante.
+Ademas, se incluye un campo para importar datos desde un archivo Excel, para ello, se debe seleccionar el archivo deseado y la hoja correspondiente.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{Imagenes/agregar_cotizacion_pagina.png}
+    \caption{Página para Agregar Cotizaciones}
+    \label{fig:agregar_cotizacion_pagina}
+\end{figure}
+
+Para cada campo, hay un boton, que permite al usuario ingresar la informacioón desde el archivo Excel seleccionado, abriendo una nueva ventana con la opcion de dar click sobre la informacion deseada.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{Imagenes/boton_importacion.png}
+    \caption{Boton para importar datos desde Excel}
+    \label{fig:importar_datos}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{Imagenes/ventana_importacion.png}
+    \caption{Ventana de importación de datos}
+    \label{fig:ventana_importacion}
+\end{figure}
+
+
 \subsubsection{Gestión de productos/servicios}
-Gestión de productos/servicios
+
+Para agregar productos, se incluyo una tabla, donde se pueden agregar, editar o eliminar productos o servicios con campos, con las mismas opciones de importación desde Excel.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{Imagenes/tabla_productos.png}
+    \caption{Tabla de productos/servicios}
+    \label{fig:tabla_productos} 
+\end{figure}
+
+Una vez concluida la cotizacion y verificada la informacion, se puede guardar la cotizacion con el siguiente boton.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{Imagenes/boton_guardar.png}
+    \caption{Botón para guardar la cotización}
+    \label{fig:boton_guardar}
+\end{figure}
+
 \subsubsection{Opciones de guardado}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -57,11 +120,26 @@ Gestión de productos/servicios
 \subsection{Ejemplo de cotización completa}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Resolución a problemas comunes}
+
 \subsection{No abre correctamente el archivo excel}
+
+En caso de que no abra correctamente el archivo excel, asegúrese de que el archivo esté en formato .xlsx y que la hoja seleccionada contenga datos válidos. Verifique también que el archivo no esté protegido con contraseña.
+
 \subsection{Error al generar el PDF}
+
+Asegurate de que todos los campos obligatorios esten completos y que haya errores en los datos ingresados. Si el problema persiste, intente reiniciar la aplicación y volver a generar el PDF.
+
 \subsection{No se muestran las imágenes}
+
+Asegúrese de que las imágenes estén en el formato correcto (JPEG, PNG) y que la ruta del archivo sea válida. Verifique también que las imágenes no estén dañadas.
+
 \subsection{Problemas al ingresar datos}
+
+Este puede ser un error comun en la aplicacion, en caso de que no se pueda ingresar algun campo, cambie a otra aplicacion y vuelva a la aplicacion de cotizaciones, esto deberia solucionar el problema.
+
 \subsection{Soporte y contacto}
+
+Para aistencia adicional, puedes contactar al soporte técnico a través del correo electrónico: aaronugaldet@gmail.com
 \pagebreak
 
 \end{document}
