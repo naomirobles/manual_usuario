@@ -116,7 +116,8 @@ Para abir la aplicacion, simplemente haga doble clic en el archivo ejecutable o 
 \section{Interaz Principal y Funcionalidades}
 \subsection{Explicación del menú de Gestión de Cotizaciones}
 
-En el menu de getión de cotizaciones, se muestran todas las cotizaciones previamente realizadas, con opciones para editar, eliminar o generar el PDF de cada una.
+En el menu de getión de cotizaciones, se muestran todas las cotizaciones previamente realizadas, con opciones para editar,
+ eliminar o generar el PDF de cada una.
 
 \begin{figure}[H]
     \centering
@@ -129,15 +130,17 @@ Ademas, se incluye un botón para agregar nuevas cotizaciones.
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.8\textwidth]{img/agregar_cotizacion.png}
+    \includegraphics[width=0.2\textwidth]{img/agregar_cotizacion.png}
     \caption{Botón para Agregar Cotización}
     \label{fig:agregar_cotizacion}
 \end{figure}
 
 \subsection{Página para agregar cotizaciones}
 
-En la pagina para agregar cotizaciones, se encuentran varios campos para ingresar los datos necesarios, como el nombre del cliente, la fecha, los productos o servicios a cotizar, y cualquier otro detalle relevante.
-Ademas, se incluye un campo para importar datos desde un archivo Excel, para ello, se debe seleccionar el archivo deseado y la hoja correspondiente.
+En la pagina para agregar cotizaciones, se encuentran varios campos para ingresar los datos necesarios, 
+como el nombre del cliente, la fecha, los productos o servicios a cotizar, y cualquier otro detalle relevante.
+Ademas, se incluye un campo para importar datos desde un archivo Excel, para ello, se debe seleccionar el archivo 
+deseado y la hoja correspondiente.
 
 \begin{figure}[H]
     \centering
@@ -146,18 +149,24 @@ Ademas, se incluye un campo para importar datos desde un archivo Excel, para ell
     \label{fig:agregar_cotizacion_pagina}
 \end{figure}
 
-Para cada campo, hay un boton, que permite al usuario ingresar la informacioón desde el archivo Excel seleccionado, abriendo una nueva ventana con la opcion de dar click sobre la informacion deseada.
+\begin{minipage}{0.68\linewidth}
+    Para cada campo, hay un boton, que permite al usuario ingresar la informacioón desde el archivo Excel seleccionado, 
+    abriendo una nueva ventana con la opcion de dar click sobre la informacion deseada.
+\end{minipage}
+\hfil   
+\begin{minipage}{0.18\linewidth}
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.6\textwidth]{img/boton_importacion.png}
+        \caption{}
+        \label{fig:importar_datos}
+    \end{figure}
+\end{minipage}
+
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.8\textwidth]{img/boton_importacion.png}
-    \caption{Boton para importar datos desde Excel}
-    \label{fig:importar_datos}
-\end{figure}
-
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=0.8\textwidth]{img/ventana_importacion.png}
+    \includegraphics[width=0.6\textwidth]{img/ventana_importacion.png}
     \caption{Ventana de importación de datos}
     \label{fig:ventana_importacion}
 \end{figure}
@@ -165,7 +174,7 @@ Para cada campo, hay un boton, que permite al usuario ingresar la informacioón 
 
 \subsubsection{Gestión de productos/servicios}
 
-Para agregar productos, se incluyo una tabla, donde se pueden agregar, editar o eliminar productos o servicios con campos, con las mismas opciones de importación desde Excel.
+Para agregar productos, se incluyó una tabla, donde se pueden agregar, editar o eliminar productos o servicios con campos, con las mismas opciones de importación desde Excel.
 
 \begin{figure}[H]
     \centering
@@ -178,62 +187,84 @@ Una vez concluida la cotizacion y verificada la informacion, se puede guardar la
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.8\textwidth]{img/boton_guardar.png}
+    \includegraphics[width=0.2\textwidth]{img/boton_guardar.png}
     \caption{Botón para guardar la cotización}
     \label{fig:boton_guardar}
 \end{figure}
 
 \subsubsection{Opciones de guardado}
+La aplicación cuenta con dos opciones para guardar la cotización, Guardar Cotízación y Guardar borrador.
+Ambas opciones guardan la cotización en la base de datos, y para cualquiera de las dos opciones, será necesario
+llenar todos los campos obligatorios, de lo contrario, se mostrará un mensaje de error. 
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.4\textwidth]{img/opciones_guardado.png}
+    \caption{Botones de las dos opciones de guardado}
+    \label{fig:opciones_guardado}
+\end{figure}
+Los campos obligatorios son 
+los datos personales del cliente, la fecha, el nombre del producto/servicio, y la información de contacto.\\
+ Si al registrar la cotización no cuentas con alguno de estos datos, la recomendación
+ es poner algún dato temporal y editarlo después.
+\begin{figure}[H] 
+    \centering
+        \includegraphics[width=0.35\linewidth]{img/mensaje_error.png}
+    \caption{Si no se llenan los campos obligatorios, se mostrará este mensaje de error y la cotización no se guardará.}
+    \label{fig:mensaje_error}
+\end{figure}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Ejemplos prácticos}
 \subsection{Cómo registrar una cotización}
-Al abrir por primera vez la aplicación, la página de \textbf{Cotizaciones guardadas} se verá como se muestra en la figura~\ref{fig:vista_inicial}
-Como aun no hay registros de cotizaciones, la tabla estará vacía. Para agregar una nueva cotización, haz clic en el botón \textbf{Agregar Cotización} o dentro de
-la tabla en \textbf{Crear primera cotización}. Esto te llevará a la página para agregar una nueva cotización, donde podrás ingresar los detalles necesarios.
-Una vez en la página de agregar cotización, podrás ver la siguiente interfaz (figura 2). Aquí podrás ingresar los detalles de la cotización.
+Al abrir por primera vez la aplicación, la página de \textbf{Cotizaciones guardadas} se verá como se muestra en la figura~\ref{fig:vista_inicial}.
+Como aun no hay registros de cotizaciones, la tabla estará vacía. 
     \begin{figure}[H]
         \centering
             \includegraphics[width=0.85\linewidth]{img/abrir_primera_vez.png}
         \caption{Vista inicial de la página de cotizaciones guardadas al abrir la aplicación por primera vez.}
         \label{fig:vista_inicial}
     \end{figure}
-
+Para agregar una nueva cotización, haz clic en el botón \textbf{Agregar Cotización} o dentro de
+la tabla en \textbf{Crear primera cotización}. Esto te llevará a la página para agregar una nueva cotización, donde podrás ingresar los 
+detalles necesarios de la cotización.
 
 \begin{figure}[H] 
     \centering
-        \includegraphics[width=0.85\linewidth]{img/add_cotizacion_inicial.png}
+        \includegraphics[width=0.8\linewidth]{img/add_cotizacion_inicial.png}
 \caption{Vista inicial de la página de agregar cotización al abrir la aplicación por primera vez.}\label{fig:vista_inicial_add}
 \end{figure}
 En esta parte podrás elegir entre dos opciones para ingresar los datos, la primera es dando clic sobre los campos y escribir a través del teclado.
 \begin{figure}[H] 
     \centering
-        \includegraphics[width=0.85\linewidth]{img/llenar_campos.png}
+        \includegraphics[width=0.7\linewidth]{img/llenar_campos.png}
     \caption{Da clic en los campos y escribe para llenarlos manualmente.}
     \label{fig:llenado_manual1}
 \end{figure}
 La segunda opción es importando los datos desde un archivo de Excel. Para ello, dirígete a la sección de 
 \textbf{Importación desde Excel} que encontrarás hasta arriba de la ventana y haz clic en el botón \textbf{Examinar}. A continuación, se abrirá una ventana 
 del Explorador de archivos donde podrás seleccionar el archivo de Excel que contiene los datos de la cotización que deseas importar. Asegúrate de que el archivo 
-esté en formato .xlsx o .xls.
+esté en formato .xlsx o .xls.\\
+Si el archivo se carga correctamente, verás el nombre del archivo en el área debajo del botón \textbf{Examinar}, 
+como se muestra en la figura~\ref{fig:llenado_manual}.
 \begin{figure}[H] 
     \centering
-        \includegraphics[width=0.85\linewidth]{img/archivos_cargados.png}
+        \includegraphics[width=0.7\linewidth]{img/archivos_cargados.png}
     \caption{Una vez que seleccionaste el archivo desde tu almacenamiento, verás el nombre del archivo en esta área.}
-    \label{fig:llenado_manual}
+    \label{fig:archivos_cargados}
 \end{figure}
 Lo que deberás hacer a continuación es seleccionar la hoja del archivo de Excel que contiene los datos que deseas importar. 
 Para ello, haz clic en el menú desplegable que se encuentra abajo del texto  \textbf{Hoja de trabajo} y elige la hoja correspondiente.
 \begin{figure}[H] 
     \centering
-        \includegraphics[width=0.85\linewidth]{img/seleccionar_hoja.png}
+        \includegraphics[width=0.7\linewidth]{img/seleccionar_hoja.png}
     \caption{Selecciona la hoja del archivo de Excel que contiene los datos que deseas importar.}
     \label{fig:seleccionar_hoja}
 \end{figure}
 
 Una vez que hayas seleccionado la hoja, podrás comenzar a importar los datos a los campos correspondientes.
-En cada campo, verás un botón con un ícono en color azul.
-
+En cada campo, verás un botón con un ícono en color azul (figura \ref{fig:importar_datos}), al seleccionarlo
+ se abrirá una ventana emergente que mostrará los datos de la hoja de Excel seleccionada.
+ 
 \begin{figure}[H]
     \centering
     \begin{minipage}{0.456\linewidth}
@@ -249,12 +280,101 @@ En cada campo, verás un botón con un ícono en color azul.
     \label{fig:icono-importar}
 \end{figure}
 
+La ventana emergente mostrará una tabla con los datos de la hoja de Excel seleccionada.
+Para importar un dato específico a un campo, simplemente haz clic en la celda correspondiente en la tabla.
+\begin{figure}[H] 
+    \centering
+        \includegraphics[width=0.6\linewidth]{img/hoja_excel.png}
+    \caption{Ventana emergente para seleccionar datos desde la hoja de Excel.}
+    \label{fig:seleccionar_hoja}
+\end{figure}
 
+Una vez que hayas seleccionado el dato, la ventana emergente se cerrará automáticamente y el campo se llenará 
+con el valor seleccionado. Repite este proceso para cada campo que desees llenar desde el archivo de Excel.
+\\\\
+Cuando hayas terminado de llenar todos los campos necesarios, ya sea manualmente o mediante la importación desde Excel,
+puedes proceder a guardar la cotización. Para ello, selecciona \textbf{Guardar Cotización} o \textbf{Guardar Borrador}.
+ Si todos los campos obligatorios están completos, la cotización se 
+guardará correctamente y serás redirigido de vuelta a la página de \textbf{Cotizaciones guardadas}.
 
-\subsection{Cómo eliminar una cotización}
+\subsubsection{Cómo agregar productos a una cotización}
+Para agregar productos o servicios a la cotización, dirígete a la sección de \textbf{Productos/Servicios} que se encuentra 
+en la parte inferior de la página de agregar cotización.
+\begin{figure}[H] 
+    \centering
+        \includegraphics[width=0.75\linewidth]{img/seccion_productos.png}
+    \caption{Sección de Productos/Servicios en la página de agregar cotización.}
+    \label{fig:seccion_productos}
+\end{figure}
+En esta sección, verás una tabla con los siguientes campos: \textbf{Nombre del producto/servicio}, \textbf{Concepto}, \textbf{Unidades}, 
+\textbf{Precio unitario} e \textbf{Imagen}.
+Para agregar un nuevo producto o servicio por primera vez, haz clic en el botón \textbf{Agregar Producto} que se encuentra arriba 
+de la tabla, o bien dentro de la tabla, como se muestra en la figura~\ref{fig:seccion_productos}.
+
+Aparecerá una nueva fila en la tabla con campos vacíos donde podrás ingresar los detalles del producto o servicio.
+
+\begin{figure}[H] 
+    \centering
+        \includegraphics[width=0.8\linewidth]{img/agregar_producto.png}
+    \caption{Fila vacía tras dar clic en \textbf{Agregar Producto}.}
+    \label{fig:llenar_producto}
+\end{figure}
+Para llenar los campos correspondientes con la información del producto o servicio, puedes hacerlo ingresando
+los datos manualmente o importándolos desde un archivo de Excel, siguiendo el mismo procedimiento descrito anteriormente.
+\begin{figure}[H] 
+    \centering
+        \includegraphics[width=0.8\linewidth]{img/concepto.png}
+    \caption{Llena los campos con la información del producto o servicio.}
+    \label{fig:llenar_producto}
+\end{figure}
+En el campo de Concepto, puedes ingresar una descripción detallada del producto o servicio, incluyendo características, beneficios o 
+cualquier otra información relevante que ayude a entender mejor lo que se está cotizando. Aunque no se muestre por completo en el campo
+de la tabla, el texto completo se reflejará en el archivo pdf de la cotización.
+
+\subsubsection{Cómo agregar una imagen a un producto/servicio}
+Para agregar una imagen a un producto o servicio, dirígete a la columna \textbf{Imagen} en la fila correspondiente al producto o servicio al 
+que deseas agregar la imagen. Haz clic en el botón con el ícono de una imagen que se encuentra en esa columna, como se muestra en
+ la figura~\ref{fig:icono_imagen}. 
+\begin{figure}[H] 
+    \centering
+        \includegraphics[width=0.8\linewidth]{img/icono_imagen.png}
+    \caption{Ícono para agregar una imagen a un producto o servicio.}
+    \label{fig:icono_imagen}
+\end{figure}
+Se abrirá una ventana del Explorador de archivos donde podrás seleccionar la imagen que deseas agregar. Asegúrate de que la imagen esté en
+formato JPEG o PNG. Una vez que selecciones la imagen, se visualizará en la tabla.
+\begin{figure}[H] 
+    \centering
+        \includegraphics[width=0.8\linewidth]{img/imagen_agregada.png}
+    \caption{Vista previa de la imagen agregada a un producto o servicio.}
+    \label{fig:imagen_agregada}
+\end{figure}
+Si deseas cambiar la imagen, simplemente haz clic en el botón azul \textbf{Imagen agregada} que se encuentra arriba de la imagen, se 
+abrirá nuevamente el Explorador de archivos y podrás seleccionar una nueva imagen para reemplazar la anterior.
+\begin{importante}[Nota importante]
+No es necesario agregar una imagen a cada producto o servicio. Si no deseas agregar una imagen, simplemente deja el campo vacío.
+\end{importante}
+
+\begin{minipage}{0.78\linewidth}
+    Para cada producto que se agregue a la tabla, en la última columna aparecerán dos botones de acciones
+    (figura \ref{fig:icono_acciones}). El primer botón, con el ícono de un '+' permite crear una nueva
+    fila con campos vacíos para registrar un nuevo producto. El segundo botón es un signo menos, que sirve 
+    para borrar el registro de producto.
+\end{minipage}
+\hfil   
+\begin{minipage}{0.08\linewidth}
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.99\textwidth]{img/boton_acciones.png}
+        \caption{}
+        \label{fig:icono_acciones}
+    \end{figure}
+\end{minipage}
+\vspace{0.5cm}
+\\Cuando hayas terminado de agregar todos los productos o servicios, puedes proceder a guardar la cotización
+ siguiendo el mismo procedimiento descrito anteriormente. No cambies de página sin antes haber guardado la cotización.
 \subsection{Cómo editar una cotización}
 \subsection{Generación del PDF de la cotización}
-\subsection{Ejemplo de cotización completa}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Resolución a problemas comunes}
 \begin{definicion}[No abre correctamente el archivo excel]
@@ -280,6 +400,16 @@ Asegúrese de que las imágenes estén en el formato correcto (JPEG, PNG) y que 
     Este puede ser un error comun en la aplicacion, en caso de que no se pueda ingresar algun campo, cambie a otra aplicacion y vuelva a la aplicacion de cotizaciones, esto deberia solucionar el problema.
 \end{definicion}
 
+\begin{definicion}[Error: A Javascript error occurred in the main process]
+    Si al estar registrando una cotización aparece una ventana como la de la figura~\ref{fig:error}, solo cierre el cuadro de diálogo
+    dando clic sobre el botón 'ok', este errror no es grave e indica que hay campos que se dejaron vacíos.
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.99\textwidth]{img/error.png}
+        \caption{}
+        \label{fig:error}
+    \end{figure}
+\end{definicion}
 
 
 \subsection{Soporte y contacto}

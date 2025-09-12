@@ -136,6 +136,15 @@
   ]
 }{\end{tcolorbox}}
 
+\newenvironment{importante}[1][Importante]{%
+  \begin{tcolorbox}[
+    colback=yellowlight,colframe=yellowdark,
+    coltitle=white,colbacktitle=yellowdark,
+    title=#1,fonttitle=\bfseries,
+    boxrule=2pt,arc=3pt
+  ]
+}{\end{tcolorbox}}
+
 %----------------------------------------
 % HIPERVINCULOS
 \RequirePackage[colorlinks=true, linkcolor=primaryblue,
