@@ -11,8 +11,7 @@
 
 \tableofcontents
 \pagebreak
-\listoffigures
-\pagebreak
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Introducción}
 Esta herramienta es una aplicación de escritorio diseñada para simplificar y agilizar el proceso de creación de cotizaciones, 
@@ -85,21 +84,19 @@ cotizaciones de manera profesional.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \subsection{Requisitos de Software}
-\begin{itemize}
+\begin{itemize}[itemsep=0pt]
     \item Lector de archivos PDF (para visualizar las cotizaciones generadas)
     \item Microsoft Excel o software compatible para crear archivos .xlsx/.xls (opcional, solo si se utilizará la función de importación)
 \end{itemize}
 
 \subsection{Sistemas operativos compatibles.}
-\begin{itemize}
-    \item Windows 10 (versión 1903 o superior)
-    \item Windows 11 (todas las versiones)
+\begin{itemize}[itemsep=0pt]
+    \item Windows 10 o superior 
+    \item Arquitectura del sistema: x64 (64 bits), no compatible con sistemas operativos de 32 bits.
 \end{itemize}
 
-Arquitectura del sistema: x64 (64 bits), no compatible con sistemas operativos de 32 bits.
-
 \subsubsection{Notas adicionales}
-\begin{itemize}
+\begin{itemize}[itemsep=0pt]
     \item La aplicación incluye todas las dependencias necesarias (SQLite, Puppeteer) en el paquete de instalación.
     \item No requiere instalación de Node.js ni otras herramientas de desarrollo.
     \item El archivo de base de datos se almacena localmente y no requiere servidor externo.
@@ -109,8 +106,17 @@ Arquitectura del sistema: x64 (64 bits), no compatible con sistemas operativos d
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Acceso}
 \subsection{Cómo abrir la aplicaión}
+\vspace{0.1cm}
+\begin{minipage}
 
-Para abir la aplicacion, simplemente haga doble clic en el archivo ejecutable o utilice el acceso directo creado durante la instalación.
+Para abir la aplicacion, simplemente haga doble clic en el archivo ejecutable o utilice el acceso directo creado en el escritorio durante la instalación.
+\\Otra opción es buscar \textbf{Cotizador} en el menú de inicio de Windows y seleccionar la aplicación de la lista de resultados.
+    \begin{figure}[H]
+        \centering
+            \includegraphics[width=0.85\linewidth]{img/barra-navegacion.png}
+        \caption{Busca \textbf{Cotizador} en el menú de inicio de Windows.}
+        \label{fig:abrir_desde_inicio}
+    \end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \pagebreak
 \section{Interaz Principal y Funcionalidades}
@@ -150,7 +156,7 @@ deseado y la hoja correspondiente.
 \end{figure}
 
 \begin{minipage}{0.68\linewidth}
-    Para cada campo, hay un boton, que permite al usuario ingresar la informacioón desde el archivo Excel seleccionado, 
+    Para cada campo, hay un boton, que permite al usuario ingresar la información desde el archivo Excel seleccionado, 
     abriendo una nueva ventana con la opcion de dar click sobre la informacion deseada.
 \end{minipage}
 \hfil   
@@ -193,7 +199,7 @@ Una vez concluida la cotizacion y verificada la informacion, se puede guardar la
 \end{figure}
 
 \subsubsection{Opciones de guardado}
-La aplicación cuenta con dos opciones para guardar la cotización, Guardar Cotízación y Guardar borrador.
+La aplicación cuenta con dos opciones para guardar la cotización, Guardar Cotización y Guardar borrador.
 Ambas opciones guardan la cotización en la base de datos, y para cualquiera de las dos opciones, será necesario
 llenar todos los campos obligatorios, de lo contrario, se mostrará un mensaje de error. 
 \begin{figure}[H]
@@ -245,7 +251,7 @@ La segunda opción es importando los datos desde un archivo de Excel. Para ello,
 del Explorador de archivos donde podrás seleccionar el archivo de Excel que contiene los datos de la cotización que deseas importar. Asegúrate de que el archivo 
 esté en formato .xlsx o .xls.\\
 Si el archivo se carga correctamente, verás el nombre del archivo en el área debajo del botón \textbf{Examinar}, 
-como se muestra en la figura~\ref{fig:llenado_manual}.
+como se muestra en la figura~\ref{fig:archivos_cargados}.
 \begin{figure}[H] 
     \centering
         \includegraphics[width=0.7\linewidth]{img/archivos_cargados.png}
@@ -374,16 +380,66 @@ No es necesario agregar una imagen a cada producto o servicio. Si no deseas agre
 \\Cuando hayas terminado de agregar todos los productos o servicios, puedes proceder a guardar la cotización
  siguiendo el mismo procedimiento descrito anteriormente. No cambies de página sin antes haber guardado la cotización.
 \subsection{Cómo editar una cotización}
+Para editar una cotización existente, dirígete a la página de \textbf{Cotizaciones guardadas} donde se muestra la tabla con todas las cotizaciones previamente registradas, luego
+    ubica la cotización que deseas editar y haz clic en el botón \textbf{Editar} que se encuentra en la columna de acciones, como se muestra en la figura~\ref{fig:editar_cotizacion}.
+\begin{figure}[H]
+    \centering
+        \includegraphics[width=0.8\linewidth]{img/editar_cotizacion.png}
+    \caption{Botón para editar una cotización existente.}
+    \label{fig:editar_cotizacion}
+\end{figure}
+Esto te llevará a la página de agregar cotización, pero esta vez, los campos estarán llenos con la información de la cotización seleccionada.
+Realiza los cambios necesarios en los campos correspondientes. Puedes modificar cualquier detalle de la cotización, incluyendo los productos o servicios, cantidades, precios, quitar la imagen
+de un producto, abrir un nuevo documento de Excel, etc.
+\begin{figure}[H]
+    \centering
+        \includegraphics[width=0.8\linewidth]{img/editar_producto.png}
+    \caption{Los campos estarán llenos con la información de la cotización seleccionada, da clic en los campos para editarlos.}
+    \label{fig:editar_producto}
+\end{figure}
+Una vez que hayas realizado los cambios, asegúrate de guardar la cotización nuevamente haciendo clic en el botón \textbf{Actualizar Cotización}. 
+Si todos los campos obligatorios están completos, la cotización se guardará correctamente y serás redirigido de vuelta a la página de \textbf{Cotizaciones guardadas}.
+\subsection{Cómo eliminar una cotización}
+Dirígete a la página de \textbf{Cotizaciones guardadas} y ubica la cotización que deseas eliminar. Haz clic en el botón rojo que contiene un icono de un bote de basura,
+ se encuentra en la columna de acciones, como se muestra en la figura~\ref{fig:eliminar_cotizacion}. 
+\begin{figure}[H]
+    \centering
+        \includegraphics[width=0.8\linewidth]{img/eliminar_cotizacion.png} 
+    \caption{Botón para eliminar una cotización existente.}
+    \label{fig:eliminar_cotizacion}
+\end{figure}
+ Un cuadro de diálogo aparecerá verificando que efectivamente desea borrar la cotización, si está seguro, haga clic en \textbf{Eliminar}, de lo contrario, 
+ seleccione \textbf{Cancelar} para cancelar la acción. Si decide eliminar el registro, esta será borrado permanentemente y ya no podrá recuperarse.
+\begin{figure}[H]
+    \centering
+        \fbox{
+            \includegraphics[width=0.4\linewidth]{img/mensaje_confirmacion.png}
+        }
+    \caption{Cuadro de diálogo para confirmar la eliminación de una cotización.}
+    \label{fig:cuadro_eliminar}
+\end{figure}
 \subsection{Generación del PDF de la cotización}
+Para generar el archivo PDF de una cotización, dirígete a la página de \textbf{Cotizaciones guardadas} y ubica la cotización de la cual deseas generar el PDF.
+Haz clic en el botón \textbf{Ver PDF} que se encuentra en la columna de acciones, como se muestra en la figura~\ref{fig:generar_pdf}.
+\begin{figure}[H]
+    \centering
+        \includegraphics[width=0.8\linewidth]{img/generar_pdf.png}
+    \caption{Botón para generar el archivo PDF de una cotización existente.}
+    \label{fig:generar_pdf}
+\end{figure}
+Aparecerá un mensaje de cargando y cuando el pdf esté listo, se abrirá automáticamente en el lector de PDF predeterminado de tu sistema. 
+\begin{figure}[H]
+    \centering
+        \fbox{
+            \includegraphics[width=0.4\linewidth]{img/resultado_pdf.png}
+        }
+    \caption{Ejemplo de pdf generado a partir de un registro.}
+    \label{fig:resultado_pdf}
+\end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Resolución a problemas comunes}
 \begin{definicion}[No abre correctamente el archivo excel]
     En caso de que no abra correctamente el archivo excel, asegúrese de que el archivo esté en formato .xlsx y que la hoja seleccionada contenga datos válidos. Verifique también que el archivo no esté protegido con contraseña.
-\end{definicion}
-\vspace{0.7cm}
-\begin{definicion}[No se guardan los cambios realizados]
-    Este apartado aborda problemas comunes que los usuarios pueden encontrar al utilizar el software, 
-    proporcionando soluciones prácticas y consejos para resolverlos.
 \end{definicion}
 \vspace{0.7cm}
 \begin{definicion}[Error al generar el PDF]

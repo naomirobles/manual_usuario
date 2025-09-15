@@ -30,6 +30,7 @@
 \RequirePackage[most]{tcolorbox}
 \RequirePackage{enumitem}
 
+
 %----------------------------------------
 % PALETA DE COLORES
 \definecolor{primaryblue}{HTML}{2b4aad}
